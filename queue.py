@@ -12,3 +12,12 @@ class Queue:
    def enqueue(self,value):
       self.data.append(value)
 
+   def dequeue (self):
+      return self.data.popleft()
+
+
+   def is_empty(self):
+      if self.data.size>0:
+         return False
+      else:
+         return True
