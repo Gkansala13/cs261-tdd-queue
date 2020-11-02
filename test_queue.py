@@ -47,36 +47,36 @@ class TestQueue(unittest.TestCase):
         q.enqueue('fee')
         self.assertEqual('fee', q.data.first.value)
 
-    # def test_enqueue_two_internal(self):
-    #     """
-    #     Enqueueing two values results in the first enqueued value being the first
-    #     one in the list, and the second value being the last one in the list.
-    #     """
-    #     q = Queue()
-    #     q.enqueue('fee')
-    #     q.enqueue('fi')
-    #     self.assertEqual('fee', q.data.first.value)
-    #     self.assertEqual('fi', q.data.last.value)
+    def test_enqueue_two_internal(self):
+        """
+        Enqueueing two values results in the first enqueued value being the first
+        one in the list, and the second value being the last one in the list.
+        """
+        q = Queue()
+        q.enqueue('fee')
+        q.enqueue('fi')
+        self.assertEqual('fee', q.data.first.value)
+        self.assertEqual('fi', q.data.last.value)
 
-    # def test_enqueue_three_internal(self):
-    #     """
-    #     Enqueueing three values results in the first enqueued value being the first
-    #     one in the list, and the third value being the last one in the list.
-    #     """
-    #     q = Queue()
-    #     q.enqueue('fee')
-    #     q.enqueue('fi')
-    #     q.enqueue('fo')
-    #     self.assertEqual('fee', q.data.first.value)
-    #     self.assertEqual('fo', q.data.last.value)
+    def test_enqueue_three_internal(self):
+        """
+        Enqueueing three values results in the first enqueued value being the first
+        one in the list, and the third value being the last one in the list.
+        """
+        q = Queue()
+        q.enqueue('fee')
+        q.enqueue('fi')
+        q.enqueue('fo')
+        self.assertEqual('fee', q.data.first.value)
+        self.assertEqual('fo', q.data.last.value)
 
-    # def test_dequeue_one(self):
-    #     """
-    #     Dequeuing from a single-element queue returns the single value.
-    #     """
-    #     q = Queue()
-    #     q.enqueue('fee')
-    #     self.assertEqual('fee', q.dequeue())
+    def test_dequeue_one(self):
+        """
+        Dequeuing from a single-element queue returns the single value.
+        """
+        q = Queue()
+        q.enqueue('fee')
+        self.assertEqual('fee', q.dequeue())
 
     # def test_dequeue_one_internal(self):
     #     """
