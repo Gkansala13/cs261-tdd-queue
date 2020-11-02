@@ -10,11 +10,10 @@ class Queue:
       self.data=sllist()
 
    def enqueue(self,value):
-      self.data.append(value)
+      return self.data.append(value)
 
    def dequeue (self):
       return self.data.popleft()
-
 
    def is_empty(self):
       if self.data.size>0:
