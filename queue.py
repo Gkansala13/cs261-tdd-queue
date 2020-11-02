@@ -1,11 +1,14 @@
 # Queue: A queue.
 # Your implementation should pass the tests in test_queue.py.
-# YOUR NAME
+# Grayson Kansala
 
 # Hint: pip3 install llist
-# from llist import sllist
+from pyllist import sllist
 
 class Queue:
+   def __init__(self):
+      self.data=sllist()
 
-    pass
+   def enqueue(self,value):
+      self.data.append(value)
 
